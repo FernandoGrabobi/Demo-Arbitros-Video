@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sistema de Gestión de Arbitros</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+        
+        <!-- Firebase SDK (Versión Compat) -->
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+        <!-- Librerías Auxiliares -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+        <!-- Librería para leer Excel -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+        <style>
+            body { font-family: 'Plus Jakarta Sans', sans-serif; }
+            @keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+            .animate-toast { animation: slideIn 0.3s ease-out forwards; }
+        </style>
+
+         <link rel="icon" href="./Assets/logoArbitros.jpeg" type="image/png">
+    </head>
+    <body class="bg-slate-50 text-slate-900 min-h-screen">
+        <div id="app">
+            <!-- El contenido se genera por JS -->
+            <div class="flex items-center justify-center min-h-screen">
+                <p class="text-slate-400 font-bold animate-pulse uppercase tracking-widest text-xs">Cargando Sistema...</p>
+            </div>
+        </div>
+        <div id="toast-container" class="fixed bottom-6 right-6 z-[100] flex flex-col gap-3"></div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
